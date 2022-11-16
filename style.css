@@ -1,0 +1,13 @@
+h1{
+    color: gold;
+    background-color: blue;
+}
+#canvas{
+    width: 100%;
+}
+.container{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
