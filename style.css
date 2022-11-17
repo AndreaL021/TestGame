@@ -5,9 +5,10 @@ h1{
 #canvas{
     width: 100%;
 }
-.container{
-    height: auto;
-    width: auto;
-    display: flex;
-    justify-content: center;
+button.controller{
+    width: 50px; 
+    height: 30px;
+}
+button.up{
+    margin-bottom: 3px;
 }
