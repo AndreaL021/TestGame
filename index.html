@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,31 @@
     <link rel="stylesheet" href="./style.css">
     <title>Gioco</title>
 </head>
+
 <body>
-    <h1 align="center">Test Game</h1>
-    <canvas id="canvas" width="1500" height="600">Browser don't support HTML5 canvas tag</canvas> <br>
+    <h1 align="center">SNAKE</h1>
+    <div align="center">
+        <canvas id="canvas" width="1500" height="600">Browser don't support HTML5 canvas tag</canvas>
+    </div><br>
     <div style="display: flex; justify-content:center;">
-        <button id="jump">Jump</button>
         <div align="center">
-            <button id="start" >Start</button>
+            <button id="start">Start</button>
             <button class="controller up" id="up">↑</button><br />
             <button class="controller" id="left">←</button>
             <button class="controller" id="down">↓</button>
             <button class="controller" id="right">→</button>
         </div>
+        <!-- Rounded switch -->
+        <div id="hardLabel">
+        <label class="switch">
+            <span>Hardmode</span>
+            <input id="hard" type="checkbox">
+            <span class="slider round"></span>
+        </label></div>
     </div>
 
 
     <script src="./main.js"></script>
 </body>
+
 </html>
