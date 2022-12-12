@@ -109,19 +109,6 @@ window.onload = function () {
         }
         registro.push([x, y, dir])
         registro_reale=[];
-        // collisioni moneta
-        if (coinx - 20 <= x + w && x <= coinx + 20 && coiny - 20 <= y + h && y <= coiny + 20) {
-            score += 1;
-            coinRespawn();
-        }
-        //COIN  
-        context.beginPath();
-        context.arc(coinx, coiny, 20, 0, 2 * Math.PI);
-        context.fillStyle = "gold";
-        context.fill();
-        context.strokeStyle = "black";
-        context.lineWidth = 1;
-        context.stroke();
         //Ridisegna forma   
         for (let i = 1; i <= score+1; i++) {
             context.beginPath();
@@ -192,7 +179,6 @@ window.onload = function () {
                     }
                 }
             }
-            
             context.fill();
             registro_reale.push([
                 registro[registro.length-i][0], //x
@@ -200,6 +186,19 @@ window.onload = function () {
             ]);
             
         }
+        // collisioni moneta
+        if (coinx - 20 <= x + w && x <= coinx + 20 && coiny - 20 <= y + h && y <= coiny + 20) {
+            score += 1;
+            coinRespawn();
+        }
+        //COIN  
+        context.beginPath();
+        context.arc(coinx, coiny, 20, 0, 2 * Math.PI);
+        context.fillStyle = "gold";
+        context.fill();
+        context.strokeStyle = "black";
+        context.lineWidth = 1;
+        context.stroke();
         // auto collisioni
         for (let i = 1; i < registro_reale.length; i++) {
             if (registro_reale[i][0]==x && registro_reale[i][1]==y) {
